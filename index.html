@@ -1,1 +1,472 @@
-hello world
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>James Christopher Hardie</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                background-color: #f0f0f0;
+                font-size: 14px;
+            }
+
+            h1 {
+                font-size: 24px;
+                margin-bottom: 5px;
+                font-weight: bold;
+            }
+
+            .nav-section {
+                margin-bottom: 20px;
+            }
+
+            .nav-links {
+                font-size: 14px;
+            }
+
+            .nav-links a {
+                color: #0000ee;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+
+            .nav-links a:visited {
+                color: #551a8b;
+            }
+
+            .nav-links a.active {
+                color: #000;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            hr {
+                border: none;
+                height: 2px;
+                background-color: gray;
+                margin: 20px 0;
+            }
+
+            h2 {
+                font-size: 20px;
+                font-weight: bold;
+                margin: 30px 0 15px 0;
+            }
+
+            h3 {
+                font-size: 16px;
+                font-weight: bold;
+                margin: 20px 0 10px 0;
+            }
+
+            .quote {
+                font-style: italic;
+                margin: 15px 0;
+                font-size: 16px;
+                margin-left: 2em;
+            }
+
+            .section-link {
+                color: #0000ee;
+                text-decoration: underline;
+                font-size: 16px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+
+            .section-link:visited {
+                color: #551a8b;
+            }
+
+            .section-description {
+                margin: 5px 0 15px 0;
+                font-size: 14px;
+            }
+
+            .translate-section {
+                margin: 30px 0;
+                font-size: 14px;
+            }
+
+            .translate-section a {
+                color: #0000ee;
+                text-decoration: underline;
+            }
+
+            .translate-section a:visited {
+                color: #551a8b;
+            }
+
+            .footer {
+                border-top: 2px solid gray;
+                padding-top: 15px;
+                margin-top: 40px;
+                font-size: 12px;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+            }
+
+            .footer a {
+                color: #0000ee;
+                text-decoration: underline;
+            }
+
+            .footer a:visited {
+                color: #551a8b;
+            }
+
+            .footer-right {
+                text-align: right;
+            }
+
+            .content-section {
+                display: none;
+            }
+
+            .content-section.active {
+                display: block;
+            }
+
+            .artwork-grid {
+                display: table;
+                margin: 20px 0;
+            }
+
+            .artwork-item {
+                margin: 10px 0;
+                font-size: 14px;
+            }
+
+            .poem {
+                font-style: italic;
+                margin: 20px 0;
+                padding-left: 20px;
+            }
+
+            .academic-paper {
+                margin: 15px 0;
+                font-size: 14px;
+            }
+
+            .hobby-list {
+                margin: 10px 0;
+            }
+
+            .forum-post {
+                border: 1px solid #ccc;
+                padding: 10px;
+                margin: 10px 0;
+                background-color: #fff;
+            }
+
+            .back-link {
+                margin: 20px 0;
+                font-size: 12px;
+            }
+
+            .back-link a {
+                color: #0000ee;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+            body {
+                font-family: Arial, sans-serif;
+                max-width: 1000px;
+                margin: 0 auto;
+                padding: 20px;
+                line-height: 1.5;
+                background-color: #ffffff;
+            }
+            h1 {
+                font-size: 32px;
+                margin-bottom: 5px;
+            }
+            .main-nav {
+                margin-top: 0;
+            }
+            /* hr {
+            border: 1px solid #ccc;
+            margin: 15px 0;
+        } */
+            .section {
+                margin: 20px 0;
+                padding-left: 20px;
+            }
+            .quote {
+                font-style: italic;
+            }
+            .footer {
+                margin-top: 20px;
+                color: #333;
+            }
+            a {
+                color: blue;
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>James Christopher Hardie</h1>
+
+        <div class="nav-section">
+            <strong id="section-label">Main</strong>&nbsp;&nbsp;&nbsp;&nbsp;[ <a href="#creative" onclick="showSection('creative')" id="nav-creative">Creative Process</a> |
+            <a href="#destinations" onclick="showSection('destinations')" id="nav-destinations">Destinations</a> | <a href="#writings" onclick="showSection('writings')" id="nav-writings">Writings</a> |
+            <a href="#pursuits" onclick="showSection('pursuits')" id="nav-pursuits">Pursuits</a> | <a href="#forum" onclick="showSection('forum')" id="nav-forum">Forum</a> |
+            <a href="#contact" onclick="showSection('contact')" id="nav-contact">Contact Me</a> ]
+        </div>
+
+        <hr />
+
+        <!-- Main Section -->
+        <div id="main" class="content-section active">
+            <h2>Current Musings</h2>
+
+            <div class="quote">
+                "I promise that I will re-learn compassion and tenderness."
+            </div>
+
+            <h2>Go!</h2>
+
+            <div class="section-description"><a href="#creative" onclick="showSection('creative')" class="section-link">The Creative Process</a> - my experiences with the creative process; graphic art, paintings, photography, etc.</div>
+
+            <div class="section-description"><a href="#destinations" onclick="showSection('destinations')" class="section-link">Destinations</a> - electronic or otherwise, places I've been that you might want to visit</div>
+
+            <div class="section-description"><a href="#writings" onclick="showSection('writings')" class="section-link">Writings</a> - opinion/position papers, academic writings, poetry, etc.</div>
+
+            <div class="section-description"><a href="#pursuits" onclick="showSection('pursuits')" class="section-link">Pursuits</a> - my hobbies, my interests, my thangs, my scene, my niche, my...pursuits.</div>
+
+            <div class="section-description"><a href="#forum" onclick="showSection('forum')" class="section-link">Forum</a> - a place for you to tell me and others what you think about anything.</div>
+
+            <div class="translate-section"><strong>Translate:</strong> [ <a href="#">French</a> | <a href="#">Spanish</a> | <a href="#">German</a> | <a href="#">Italian</a> | <a href="#">Portuguese</a> ]</div>
+        </div>
+
+        <!-- Creative Process Section -->
+        <div id="creative" class="content-section">
+            <h2>The Creative Process</h2>
+            <div class="back-link"><a href="/" onclick="showSection('main')">&lt;&lt; Back to Main</a></div>
+
+            <p>Welcome to my creative world. Here you'll find a collection of my artistic endeavors spanning multiple mediums and years of exploration.</p>
+
+            <h3>Recent Works</h3>
+            <div class="artwork-grid">
+                <div class="artwork-item">• <strong>Untitled Digital Composition #3</strong> - Photoshop manipulation, 1998</div>
+                <div class="artwork-item">• <strong>Urban Decay Series</strong> - Black & white photography, 1997-98</div>
+                <div class="artwork-item">• <strong>Abstract Oils</strong> - Oil on canvas, various sizes, 1998</div>
+                <div class="artwork-item">• <strong>Typography Experiments</strong> - Digital art, 1998</div>
+            </div>
+
+            <h3>Artist Statement</h3>
+            <p>The creative process is not just about the final product, but about the journey of discovery. Each piece represents a moment in time, a feeling, an exploration of form and meaning that can't be captured in words alone.</p>
+
+            <p><em>Note: Due to bandwidth limitations, full-resolution images are not available online. Please contact me for prints or portfolio viewing.</em></p>
+        </div>
+
+        <!-- Destinations Section -->
+        <div id="destinations" class="content-section">
+            <h2>Destinations</h2>
+            <div class="back-link"><a href="/" onclick="showSection('main')">&lt;&lt; Back to Main</a></div>
+
+            <h3>Physical Destinations</h3>
+            <div class="artwork-item">• <strong>Prague, Czech Republic</strong> - The most beautiful city in Europe. Go in spring.</div>
+            <div class="artwork-item">• <strong>Big Sur, California</strong> - Where the mountains meet the sea. Transcendent.</div>
+            <div class="artwork-item">• <strong>Montreal, Quebec</strong> - European charm without crossing the ocean.</div>
+            <div class="artwork-item">• <strong>Austin, Texas</strong> - Keep it weird. Great music scene.</div>
+
+            <h3>Electronic Destinations</h3>
+            <div class="artwork-item">
+                • <strong><a href="http://www.summersault.com">Summersault</a></strong> - Web development collective
+            </div>
+            <div class="artwork-item">
+                • <strong><a href="http://www.metafilter.com">MetaFilter</a></strong> - Community weblog
+            </div>
+            <div class="artwork-item">
+                • <strong><a href="http://www.k10k.net">K10K</a></strong> - Design inspiration
+            </div>
+            <div class="artwork-item">
+                • <strong><a href="http://www.word.com">Word Magazine</a></strong> - Online literary culture
+            </div>
+
+            <p><em>Links current as of February 1999. The web changes fast - some may be gone by the time you read this.</em></p>
+        </div>
+
+        <!-- Writings Section -->
+        <div id="writings" class="content-section">
+            <h2>Writings</h2>
+            <div class="back-link"><a href="/" onclick="showSection('main')">&lt;&lt; Back to Main</a></div>
+
+            <h3>Recent Poetry</h3>
+            <div class="poem">
+                <strong>Digital Ghosts</strong><br />
+                <br />
+                Pixels dance in cathode ray dreams,<br />
+                While modems sing their 56k hymns.<br />
+                We are the first generation<br />
+                To love through fiber optic streams,<br />
+                To find ourselves in HTML.<br />
+                <br />
+                Connection is the new religion,<br />
+                Bandwidth our daily bread.
+            </div>
+
+            <h3>Academic Papers</h3>
+            <div class="academic-paper">• <strong>"The Democratization of Publishing in the Digital Age"</strong> - Media Studies, 1998</div>
+            <div class="academic-paper">• <strong>"Hypertext Narrative and the Death of Linear Storytelling"</strong> - Literature & Technology, 1997</div>
+
+            <h3>Opinion Pieces</h3>
+            <div class="academic-paper">• <strong>"Why the Web Won't Kill Books (But It Might Transform Them)"</strong> - 1999</div>
+            <div class="academic-paper">• <strong>"Community in Cyberspace: Real or Imagined?"</strong> - 1998</div>
+
+            <p><em>Full texts available upon request. Some pieces originally published in university journals or online magazines.</em></p>
+        </div>
+
+        <!-- Pursuits Section -->
+        <div id="pursuits" class="content-section">
+            <h2>Pursuits</h2>
+            <div class="back-link"><a href="/" onclick="showSection('main')">&lt;&lt; Back to Main</a></div>
+
+            <p>Here's what occupies my time when I'm not staring at screens or covered in paint...</p>
+
+            <h3>Current Obsessions</h3>
+            <div class="hobby-list">
+                • <strong>Vinyl Archaeology</strong> - Digging through record crates for forgotten gems<br />
+                • <strong>Urban Exploration</strong> - Finding beauty in abandoned places<br />
+                • <strong>Coffee Culture</strong> - The art and science of the perfect cup<br />
+                • <strong>Independent Film</strong> - Sundance darlings and foreign cinema<br />
+                • <strong>Web Standards</strong> - Clean code and accessible design
+            </div>
+
+            <h3>My Scene</h3>
+            <p>I'm part of a loose collective of artists, writers, and technologists who believe the web can be more than commerce and cat photos. We meet irregularly at coffee shops and galleries, planning the digital renaissance.</p>
+
+            <h3>Musical Tastes</h3>
+            <p>Currently heavy rotation: Portishead, Massive Attack, DJ Shadow, Aphex Twin, Radiohead. Also rediscovering: Miles Davis, John Coltrane, Bill Evans. The future of music is both electronic and deeply human.</p>
+
+            <h3>Reading List</h3>
+            <p>Recently finished: <em>Cryptonomicon</em> by Neal Stephenson, <em>Pattern Recognition</em> by William Gibson. Currently reading: <em>The Meme Machine</em> by Susan Blackmore.</p>
+        </div>
+
+        <!-- Forum Section -->
+        <div id="forum" class="content-section">
+            <h2>Forum</h2>
+            <div class="back-link"><a href="/" onclick="showSection('main')">&lt;&lt; Back to Main</a></div>
+
+            <p>Share your thoughts, questions, or random musings. This is a space for dialogue.</p>
+
+            <div class="forum-post">
+                <strong>Posted by: Sarah_M</strong> | <em>Feb 1, 1999 - 11:43 PM</em><br />
+                <br />
+                Your latest photography series really captures something about urban isolation. Have you considered showing these in a gallery setting?
+            </div>
+
+            <div class="forum-post">
+                <strong>Posted by: TechnoPhil</strong> | <em>Jan 28, 1999 - 3:15 PM</em><br />
+                <br />
+                Question about your web design philosophy - do you think we'll ever move beyond tables for layout? Seems like we're stuck with them for now...
+            </div>
+
+            <div class="forum-post">
+                <strong>Posted by: Anonymous</strong> | <em>Jan 25, 1999 - 8:22 AM</em><br />
+                <br />
+                "This time, don't assume anything" - what does that mean? It's been bugging me since I first saw it on your site.
+            </div>
+
+            <p><em>Want to add your voice? Email me and I'll post your thoughts (anonymously if you prefer).</em></p>
+        </div>
+
+        <!-- Contact Section -->
+        <div id="contact" class="content-section">
+            <h2>Contact Me</h2>
+            <div class="back-link"><a href="/" onclick="showSection('main')">&lt;&lt; Back to Main</a></div>
+
+            <p>I believe in the power of direct communication. Reach out if you want to talk about art, technology, life, or anything that matters to you.</p>
+
+            <h3>Digital Contact</h3>
+            <p>
+                <strong>Email:</strong> <a href="mailto:chris@summersault.com">chris@summersault.com</a><br />
+                <strong>AIM:</strong> JCHardie99<br />
+                <strong>ICQ:</strong> 14587234
+            </p>
+
+            <h3>Physical Contact</h3>
+            <p>I'm based in the Pacific Northwest, but I travel frequently for work and art. If you're in the area and want to meet for coffee and conversation, just ask.</p>
+
+            <h3>Collaboration</h3>
+            <p>I'm always interested in collaborating with other artists, writers, and creative technologists. Whether it's a web project, art installation, or just bouncing ideas around - let's create something together.</p>
+
+            <h3>Response Time</h3>
+            <p>I try to respond to all genuine messages within 48 hours. Please be patient - sometimes the offline world demands attention too.</p>
+        </div>
+
+        <div class="footer">
+            <div class="footer-left">
+                Page by <span style="color: green; font-weight: bold;">James Christopher Hardie</span>, <a href="mailto:chris@Summersault.com">chris@Summersault.com</a><br />
+                Last updated: Tuesday, 02-Feb-1999 23:07:22 EST, 2466 visits
+            </div>
+            <div class="footer-right">
+                ||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This time, don't assume anything.
+            </div>
+        </div>
+
+        <script>
+            // Section name mappings for display
+            const sectionLabels = {
+                main: "Main",
+                creative: "Creative Process",
+                destinations: "Destinations",
+                writings: "Writings",
+                pursuits: "Pursuits",
+                forum: "Forum",
+                contact: "Contact Me",
+            };
+            function showSection(sectionName) {
+                // Hide all sections
+                document.querySelectorAll(".content-section").forEach(function (section) {
+                    section.classList.remove("active");
+                });
+
+                // Show selected section
+                document.getElementById(sectionName).classList.add("active");
+
+                // Update the current section label
+                var labelElement = document.getElementById("section-label");
+                if (labelElement) {
+                    labelElement.textContent = sectionLabels[sectionName];
+                }
+
+                // Update corner to display section name
+                document.getElementById("section-label").textContent = sectionLabels[sectionName];
+
+                // Update navigation highlighting
+                document.querySelectorAll(".nav-section a").forEach(function (link) {
+                    link.classList.remove("active");
+                });
+
+                const activeLink = document.getElementById("nav-" + sectionName);
+                if (activeLink) {
+                    activeLink.classList.add("active");
+                }
+
+                // Scroll to top
+                window.scrollTo(0, 0);
+                return false;
+            }
+
+            // Wait for page to fully load
+            window.onload = function () {
+                const hash = window.location.hash.substring(1); // strip the leading '#'
+                if (sectionLabels[hash]) {
+                    showSection(hash);
+                } else {
+                    showSection("main");
+                }
+
+            };
+        </script>
+    </body>
+</html>
